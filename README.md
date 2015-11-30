@@ -3,4 +3,5 @@ Ports of core_random() @ [amxcore.c](https://github.com/vitei/pawnscript/blob/ma
 
 * [C++](PAWNRandom.cpp)
 * [Java](PAWNRandom.java)
+* [Python](PAWNRandom.py)
 * [Go](PAWNRandom.go)
