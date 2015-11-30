@@ -25,7 +25,7 @@ unsigned int pawnRandom(int max = 0) {
 
 int main()
 {
-	seed = 124767; // example seed, make sure not to use this
+	seed = 124768; // example seed, make sure not to use this
 	
 	printf("Seed: %d\n", seed);
 	
