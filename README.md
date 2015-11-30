@@ -1,2 +1,4 @@
 # PAWNRandom
-Ports of random() used in the PAWN scripting language.
+Ports of core_random() @ [amxcore.c](https://github.com/vitei/pawnscript/blob/master/amx/amxcore.c) used in the PAWN scripting language.
+
+C++: [PAWNRandom.cpp](PAWNRandom.cpp)
