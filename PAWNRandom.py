@@ -10,9 +10,9 @@ def main():
     print "%d" % pawnRandom(7) # 0 to 6
     print "%d" % (1 + pawnRandom(12)) # 1 to 12
     print "%d" % (1985 + pawnRandom(31)) # 1985 to 2015
-    print "%d" % pawnRandom() # 0 to sys.maxint
+    print "%d" % pawnRandom(0) # 0 to sys.maxint
     
-def pawnRandom(max = 0):
+def pawnRandom(max):
     result = 16838 * c_uint16(seed.value).value
     
     temp = 20077 * c_uint16(seed.value).value

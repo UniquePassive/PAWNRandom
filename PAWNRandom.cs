@@ -11,9 +11,9 @@ namespace PAWNRandom
 
         static int pawnRandom(int max = 0)
         {
-            int result = 16838 * (ushort)seed;
+            int result = 16838 * (seed & 0xFFFF);
 
-            int temp = 20077 * (ushort)seed;
+            int temp = 20077 * (seed & 0xFFFF);
             temp += 12345;
             temp = temp >> 16;
 

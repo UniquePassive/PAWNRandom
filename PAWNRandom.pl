@@ -22,7 +22,7 @@ my $seed = 0;
 	$result &= 0x7FFFFFFF;
 	$seed = 1103515245 * $seed + 12345;
 		my $sc = scalar(@_);
-	if ($sc) {
+	if ($_[0] != 0) {
 		$result %= $_[0];
 	}
 	return $result;
@@ -34,4 +34,4 @@ print "Seed: ", $seed, "\n";
 print pawnRandom(7), "\n";
 print 1 + pawnRandom(12), "\n";
 print 1985 + pawnRandom(31), "\n";
-print pawnRandom(), "\n";
+print pawnRandom(0), "\n";
