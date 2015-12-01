@@ -1,5 +1,3 @@
-use strict;
-use warnings;
 use integer;
 
 my $seed = 0;

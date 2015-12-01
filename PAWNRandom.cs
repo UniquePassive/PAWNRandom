@@ -9,7 +9,7 @@ namespace PAWNRandom
     {
         static int seed = 0;
 
-        static int pawnRandom(int max = 0)
+        static int pawnRandom(int max)
         {
             int result = 16838 * (seed & 0xFFFF);
 
@@ -24,7 +24,7 @@ namespace PAWNRandom
 
             seed = 1103515245 * seed + 12345;
 
-            if (max != 0L)
+            if (max != 0)
             {
                 result %= max;
             }
@@ -40,7 +40,7 @@ namespace PAWNRandom
             Console.WriteLine(pawnRandom(7)); // 0 to 6
             Console.WriteLine(1 + pawnRandom(12)); // 1 to 12
             Console.WriteLine(1985 + pawnRandom(31)); // 1985 to 2015
-            Console.WriteLine(pawnRandom()); // 0 to Int32.MaxValue
+            Console.WriteLine(pawnRandom(0)); // 0 to Int32.MaxValue
 
             Console.ReadKey();
         }

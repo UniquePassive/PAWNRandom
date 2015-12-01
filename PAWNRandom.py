@@ -1,16 +1,6 @@
 from ctypes import *
 
 seed = c_uint32(0)
-
-def main():
-    seed.value = 124768
-    
-    print "Seed: %d" % seed.value
-    
-    print "%d" % pawnRandom(7) # 0 to 6
-    print "%d" % (1 + pawnRandom(12)) # 1 to 12
-    print "%d" % (1985 + pawnRandom(31)) # 1985 to 2015
-    print "%d" % pawnRandom(0) # 0 to sys.maxint
     
 def pawnRandom(max):
     result = 16838 * c_uint16(seed.value).value
@@ -30,6 +20,16 @@ def pawnRandom(max):
         result %= max
     
     return result
+
+def main():
+    seed.value = 124768
+    
+    print "Seed: %d" % seed.value
+    
+    print "%d" % pawnRandom(7) # 0 to 6
+    print "%d" % (1 + pawnRandom(12)) # 1 to 12
+    print "%d" % (1985 + pawnRandom(31)) # 1985 to 2015
+    print "%d" % pawnRandom(0) # 0 to sys.maxint
 
 if __name__ == "__main__":
     main()

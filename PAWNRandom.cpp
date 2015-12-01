@@ -17,7 +17,7 @@ int pawnRandom(int max) {
 
 	seed = 1103515245 * seed + 12345;
 
-	if (max != 0L) {
+	if (max != 0) {
 		result %= max;
 	}
 	return result;
